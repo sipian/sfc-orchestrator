@@ -49,11 +49,11 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven {
-        url "http://get.openbaton.org:8081/nexus/content/groups/public"
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
     }
 }
 dependencies {
-    compile 'org.openbaton:sdk:3.9.9'
+    compile 'org.openbaton:sdk:4.0.0'
     compile 'org.openbaton:catalogue:3.9.9'
 
     compile 'org.openbaton:plugin:3.0.0'
