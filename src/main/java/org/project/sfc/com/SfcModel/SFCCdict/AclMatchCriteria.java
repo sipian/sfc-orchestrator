@@ -17,6 +17,9 @@ import java.io.Serializable;
 
 @Entity
 //@Generated("org.jsonschema2pojo")
+//
+// gson to change java object to json and vice versa
+// has functions toJSON , fromJSON
 public class AclMatchCriteria implements Serializable {
   @SerializedName("id")
   @Expose
