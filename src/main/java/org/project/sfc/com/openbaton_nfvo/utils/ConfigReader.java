@@ -9,7 +9,8 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
+
+import java.util.Properties;  // extends Hashmap <Object, Object> to map properties key -> value pair
 
 /**
  * Created by maa on 27.11.15.

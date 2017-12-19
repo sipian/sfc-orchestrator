@@ -27,7 +27,7 @@ nfvo.password=openbaton
  */
 // these properties and save them in the String variables
 // A good explanation can be found here
-//  https://www.mkyong.com/spring-boot/spring-boot-configurationproperties-example/
+// https://www.mkyong.com/spring-boot/spring-boot-configurationproperties-example/
 //  
 
 @ConfigurationProperties(prefix = "nfvo") 
@@ -39,7 +39,7 @@ public class NfvoConfiguration {
   private String username;
   private String password;
 
-  private Logger logger = LoggerFactory.getLogger(this.getClass()); // for printinh
+  private Logger logger = LoggerFactory.getLogger(this.getClass()); // for printing the error messages
 
   // getters and setters are needed for all the properties variables
   public String getIP() {
