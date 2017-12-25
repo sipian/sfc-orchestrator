@@ -17,14 +17,14 @@ import javax.annotation.PostConstruct;
 
 // @ConfigurationProperties is used to get the parameters in the properties file and map them to variables
 // prefix = nfvo will get 
-/*
 
+/*
 nfvo.ip=localhost
 nfvo.port=8080
 nfvo.username=admin
 nfvo.password=openbaton
+*/
 
- */
 // these properties and save them in the String variables
 // A good explanation can be found here
 // https://www.mkyong.com/spring-boot/spring-boot-configurationproperties-example/

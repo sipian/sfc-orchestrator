@@ -1,5 +1,11 @@
 package org.project.sfc.com.openbaton_nfvo.utils;
 
+/*
+
+ @Bean make the bean in factory --> as in xml file here https://www.tutorialspoint.com/spring
+ with id/name of bean same as methodName
+
+ */
 /**
  * Created by mah on 3/14/16.
  */
@@ -29,6 +35,13 @@ import javax.annotation.PostConstruct;
 /**
  * Created by maa on 10.11.15.
  */
+
+/*
+  For a thorough understanding of the amqp protocol in rabbitMQ the links below are good resources
+  https://www.cloudamqp.com/blog/2015-09-03-part4-rabbitmq-for-beginners-exchanges-routing-keys-bindings.html
+  https://www.rabbitmq.com/tutorials/amqp-concepts.html
+*/
+  
 @Configuration
 @ComponentScan("org.project.sfc.com")
 public class ConfigurationBeans {
@@ -53,7 +66,10 @@ public class ConfigurationBeans {
     return new GsonBuilder().serializeNulls().create();
   }
 
-  @Bean
+  /* connection is TCP connection to rabbitMQ broker at the host from the properties file connectioFactory facilitates such a connection
+     CachingConnectionFactory returns the same Connection from all subsequent createConnection() call
+  */
+ @Bean
   public ConnectionFactory getConnectionFactory(Environment env) {
     logger.debug("Created ConnectionFactory");
     CachingConnectionFactory factory =
@@ -69,6 +85,10 @@ public class ConfigurationBeans {
     return factory;
   }
 
+
+  /*
+    Use Topic Exchangers 
+  */
   @Bean
   public TopicExchange getTopic() {
     logger.debug("Created Topic Exchange");

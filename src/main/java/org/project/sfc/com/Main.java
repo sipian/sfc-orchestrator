@@ -19,7 +19,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication // telling the main class for the spring application
 @ComponentScan(basePackages = "org.project.sfc.com")  // specify the base package to search for components 
-@EnableJpaRepositories("org.project.sfc.com.SfcRepository")
+@EnableJpaRepositories("org.project.sfc.com.SfcRepository")  // JPA is for relational databases
 @EntityScan(
   basePackages = {"org.project.sfc.com.SfcModel.SFCdict", "org.project.sfc.com.SfcModel.SFCCdict"}
 )
